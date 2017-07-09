@@ -15,9 +15,13 @@ func init() {
 	buf := new(bytes.Buffer)
 	w := gzip.NewWriter(buf)
 
-	for i := 0; i < 10; i++ {
-		// 1 Gb at a time
-		if _, err := w.Write(make([]byte, 1024*1024*1024)); err != nil {
+	// write 10Gb to the gzip buffer
+	for i := 0; i < 1024; i++ {
+		// 10Mb at a time
+		if _, err := w.Write(make([]byte, 10*1024*1024)); err != nil {
+			log.Printf("Error = %s", err.Error())
+		}
+		if err := w.Flush(); err != nil {
 			log.Printf("Error = %s", err.Error())
 		}
 	}
