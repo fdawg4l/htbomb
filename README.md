@@ -1,5 +1,5 @@
 # htbomb
-_For OOM'ing bots ruining the internet_
+_For OOM'ing bots ruining the internet._
 _(Also [this](https://www.youtube.com/watch?v=dIQ53t0gv_4))_
 
 
