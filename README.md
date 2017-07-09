@@ -16,4 +16,4 @@ $ ./bomb
 
 ```
 
-Startup will be slow since we build the payload on startup.  The result is `GET`s will serve a 10G gzip bomb to the client.
+Startup will be slow since we build the payload on startup.  The result is `GET`s (well... really any operation) will serve a 10G gzip bomb to the client.
